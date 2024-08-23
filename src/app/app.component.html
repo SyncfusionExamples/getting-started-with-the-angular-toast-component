@@ -1,0 +1,29 @@
+<div class="container">
+<button ejs-button (click)="showClick($event)">Show Toast</button>
+<button ejs-button (click)="hideClick($event)">Hide Toast</button>
+</div>
+<ejs-toast #toastObj [position]='position' [timeOut]='5000' [showCloseButton]="true" >
+  <!-- <ng-template #title>
+    <div>Matt sent you a friend request</div>
+  </ng-template>
+  <ng-template #content>
+    <div>Hey, wanna dress up as wizards and ride our hoverboards?</div>
+  </ng-template> -->
+
+  <ng-template #template>
+    <div id='template_toast'>
+      <div className="horizontal-align">
+        <div className='toast-content'>
+          <div className='toast-title'>
+            Weekend Alarm
+          </div>
+          <div className='toast-message'>
+            With traffic, its likely to take 45 minutes to get to jenny's 24th Birthday Bash at Hillside Bar, 454 E.
+            Olive Way by 10:00PM
+          </div>
+        </div>
+      </div>
+      <img src='https://ej2.syncfusion.com/demos/src/toast/resource/map.jpg' />
+    </div>
+  </ng-template>
+</ejs-toast>
