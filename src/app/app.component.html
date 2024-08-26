@@ -1,8 +1,8 @@
 <div class="container">
-<button ejs-button (click)="showClick($event)">Show Toast</button>
-<button ejs-button (click)="hideClick($event)">Hide Toast</button>
+  <button ejs-button (click)="showToast($event)">Show Toast</button>
+  <button ejs-button (click)="hideToast($event)">Hide Toast</button>
 </div>
-<ejs-toast #toastObj [position]='position' [timeOut]='5000' [showCloseButton]="true" >
+<ejs-toast #toastObj [position]='position' [timeOut]='500' [showCloseButton]="false">
   <!-- <ng-template #title>
     <div>Matt sent you a friend request</div>
   </ng-template>
@@ -13,13 +13,13 @@
   <ng-template #template>
     <div id='template_toast'>
       <div className="horizontal-align">
-        <div className='toast-content'>
-          <div className='toast-title'>
+        <div className='toast-content' style="padding-bottom: 5px;">
+          <div className='toast-title' style="font-weight: bold; padding-bottom: 5px;">
             Weekend Alarm
           </div>
-          <div className='toast-message'>
-            With traffic, its likely to take 45 minutes to get to jenny's 24th Birthday Bash at Hillside Bar, 454 E.
-            Olive Way by 10:00PM
+          <div className='toast-message' style="padding-bottom: 5px;">
+            With traffic, its likely to take 45 minutes to get to jenny's 24th Birthday
+            Bash at Hillside Bar, 454 E.Olive Way by 10:00PM
           </div>
         </div>
       </div>
